@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:qr_scanner/qr_generator_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -51,8 +52,20 @@ class HomeScreen extends StatelessWidget {
                         () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => GeneratorScreen()
-                          ))),
+                            builder: (context) => 
+                            const GeneratorScreen()))),
+
+                     SizedBox(height: 20),                      
+                     _buildFeatureButton(
+                        context,
+                        "Scan QR Code",
+                        Icons.qr_code_scanner,
+                        () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => 
+                            const GeneratorScreen()))),
+
                     ],
 
                   )
@@ -63,5 +76,37 @@ class HomeScreen extends StatelessWidget {
         ),
     );
 
+  }
+  Widget _buildFeatureButton(BuildContext context, String title, IconData icon, VoidCallback onPressed) {
+    return GestureDetector(
+      onTap: onPressed,      
+      child: Container(
+        padding: EdgeInsets.all(15),
+        height: 200,
+        width:250,
+        decoration :BoxDecoration(
+          color: Colors.indigo,
+          borderRadius: BorderRadius.circular(15),
+
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+          children: [
+            Icon(icon, size: 48, color: Colors.white),
+            Text(
+              title,
+              style: GoogleFonts.poppins(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+
+          ],
+        ),
+
+      ),
+    );   
   }
 }
