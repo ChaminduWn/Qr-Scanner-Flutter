@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qr_scanner/qr_generator_screen.dart';
+import 'package:qr_scanner/qr_scanner_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -53,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => 
-                            const GeneratorScreen()))),
+                            const GeneratorScreen()),),),
 
                      SizedBox(height: 20),                      
                      _buildFeatureButton(
@@ -64,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => 
-                            const GeneratorScreen()))),
+                            const ScannerScreen()),),),
 
                     ],
 
