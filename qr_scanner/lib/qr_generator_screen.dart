@@ -89,13 +89,13 @@ Widget _buildTextField(TextEditingController controller, String label){
       case 'contact':
         return Column(
           children: [
-            _buildTextField(_controllers['name'], 'Name'),
-            _buildTextField(_controllers['phone'], 'Phone'),
-            _buildTextField(_controllers['email'], 'Email'),
+            _buildTextField(_controllers['name']!, "Name"),
+            _buildTextField(_controllers['phone']!, "Phone"),
+            _buildTextField(_controllers['email']!, "Email"),
           ],
         );
         case 'url':  
-        return _buildTextField(_controllers['url']!, 'URL');        
+        return _buildTextField(_controllers['url']!, "URL");        
         default:
         return TextField(
           controller: _textController,
@@ -208,6 +208,26 @@ Widget _buildTextField(TextEditingController controller, String label){
                         ),
                      ),
                   ),
+
+                  SizedBox(height: 16),
+                  ElevatedButton.icon(
+                    onPressed: _shareQRCode,
+                    icon: Icon(Icons.share),
+                    label: Text('Share QR Code'),
+                    style:ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 12,
+                        horizontal: 24,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      ) 
+
+                    )
+                  ),
+
                 ],
                )
 
