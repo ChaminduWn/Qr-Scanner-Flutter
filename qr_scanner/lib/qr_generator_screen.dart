@@ -223,10 +223,10 @@ Widget _buildTextField(TextEditingController controller, String label){
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      ) 
+                      ),
 
-                    )
-                  ),
+                    ),
+                  
 
                 ],
                )
