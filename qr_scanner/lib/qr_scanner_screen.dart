@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart' as contacts ;
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:share_plus/share_plus.dart';
@@ -249,10 +250,16 @@ class _ScannerScreenState extends State<ScannerScreen> {
   }  else {
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 114, 7, 43),
+      backgroundColor: const Color(0xFF1C1C2B),
       appBar:AppBar(
-        title: Text("QR Scanner"),
-        backgroundColor: const Color.fromARGB(255, 114, 7, 43),
+         title: Text(
+          'Generate QR Code',
+          style: GoogleFonts.poppins(
+            color: Colors.cyanAccent,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: const Color(0xFF2A2A3D),
         foregroundColor: Colors.white,
         actions: [
           IconButton(
