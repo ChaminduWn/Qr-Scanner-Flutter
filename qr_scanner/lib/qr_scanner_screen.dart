@@ -279,6 +279,24 @@ class _ScannerScreenState extends State<ScannerScreen> {
               }
             },
           ),
+          
+          Positioned(
+            bottom: 24,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Text(
+                'Align Qr Code in the Frame',
+                style: TextStyle(
+                  color: Colors.white,
+                  backgroundColor: Colors.black.withOpacity(0.6),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                 )
+              )
+            
+            )
+          )
             ],)
 
     );   
