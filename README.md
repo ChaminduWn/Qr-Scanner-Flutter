@@ -19,11 +19,11 @@ WN QR Scanner & Generator is a Flutter-based mobile application that allows user
 
 ## Screenshots
 
-### Home Screen
-![Home Screen](https://github.com/user-attachments/assets/213c5f1c-8e78-42c3-8cff-94a3be7a0c15)
+Here’s the updated table without the "Generate QR Code" column:
 
-### Scan Screen
-![Scan QR Code](https://github.com/user-attachments/assets/ef8a21f1-cfc1-45d3-a245-5ba918d063fd)
+| Home Screen | Scan QR Code |
+|-------------|--------------|
+| ![Home Screen](https://github.com/user-attachments/assets/213c5f1c-8e78-42c3-8cff-94a3be7a0c15) | ![Scan QR Code](https://github.com/user-attachments/assets/ef8a21f1-cfc1-45d3-a245-5ba918d063fd) |
 
 ### Generated QR Code Screenshots
 | Generated QR Code 1 | Generated QR Code 2 | Generated QR Code 3 |
