@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 61, 53, 53),
+      backgroundColor: const Color(0xFF0D0D0D), // Dark futuristic background
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -20,7 +20,14 @@ class HomeScreen extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: const Color(0xFF00FFFF), // Neon Cyan color
+                  shadows: [
+                    Shadow(
+                      blurRadius: 20.0,
+                      color: const Color(0xFF00FFFF).withOpacity(0.7),
+                      offset: const Offset(0, 0),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -29,12 +36,19 @@ class HomeScreen extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(58),
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.surface,
+                  gradient: LinearGradient(
+                    colors: [
+                      const Color(0xFF1A1A1A),
+                      const Color(0xFF333333),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                   borderRadius: BorderRadius.circular(24),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      blurRadius: 10,
+                      color: Colors.black.withOpacity(0.6),
+                      blurRadius: 15,
                       spreadRadius: 5,
                     ),
                   ],
@@ -84,19 +98,40 @@ class HomeScreen extends StatelessWidget {
         height: 200,
         width: 240,
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 114, 7, 43),
+          gradient: LinearGradient(
+            colors: [
+              const Color(0xFF00264D),
+              const Color(0xFF003366),
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
           borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF00FFFF).withOpacity(0.5), // Neon Cyan Glow
+              blurRadius: 20,
+              spreadRadius: 5,
+            ),
+          ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(icon, size: 48, color: Colors.white),
+            Icon(icon, size: 48, color: const Color(0xFF00FFFF)),
             Text(
               title,
               style: GoogleFonts.poppins(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: const Color(0xFF00FFFF), // Neon Cyan Text
+                shadows: [
+                  Shadow(
+                    blurRadius: 10.0,
+                    color: const Color(0xFF00FFFF).withOpacity(0.7),
+                    offset: const Offset(0, 0),
+                  ),
+                ],
               ),
             ),
           ],
