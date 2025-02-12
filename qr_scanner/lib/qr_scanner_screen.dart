@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart' as contacts ;
 import 'package:mobile_scanner/mobile_scanner.dart';
@@ -22,7 +24,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
   void initState() { 
     super.initState();
     scannerController = MobileScannerController();
-    _checckPermission();
+    _checkPermission();
   }
 
   @override
@@ -31,7 +33,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
     super.dispose();
   }
 
-  Future<void> _checckPermission() async {
+  Future<void> _checkPermission() async {
     final status = await Permission.camera.request();
     setState(() {    
       hasPermission = status.isGranted;
@@ -182,24 +184,105 @@ class _ScannerScreenState extends State<ScannerScreen> {
       ..phones = [contacts.Phone(phone ?? '')]
       ..emails = [contacts.Email(phone ?? '')];
 
-      try(
+      try {
         await contact.insert();
-        
-      )
-    }
-
-
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Contact saved')),
+        ); 
 
         
-
-
-          
+      } catch (e) {
+         ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed')),
+        ); 
+        
+      }   
+      
+    }         
 
        
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold();
+    if(!hasPermission){      
+    return  Scaffold(
+      backgroundColor: Colors.indigo,
+      appBar:AppBar(
+        title: Text("QR Scanner"),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
+      ),
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: SizedBox(
+              height: 350,
+              child: Card(
+                elevation: 0,
+                color:Colors.white,
+                child:Padding(padding: EdgeInsets.all(30),
+                child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.camera_alt_outlined,
+                  size: 64, color: Colors.grey,
+                  ),
+                  SizedBox(height: 16),  
+                  Text("Camera Permisiion is Required"),
+                  SizedBox(height:16),
+                  ElevatedButton(onPressed:  _checkPermission,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor :Colors.indigo,
+                    foregroundColor :Colors.white
+                  ), 
+                  child: Text('Grant Permisson'),
+                  )
+                ],)
+                )
+              )
+            ))
+        ],
+      )
+    );
+  }  else {
+
+    return Scaffold(
+      backgroundColor: Colors.indigo,
+      appBar:AppBar(
+        title: Text("QR Scanner"),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            onPressed: (){
+            setState(() {
+              isFlashOn = !isFlashOn;
+              scannerController.toggleTorch();
+            });
+          },
+          icon: Icon(isFlashOn ? Icons.flash_on : Icons.flash_off),
+          )
+            
+        ],
+      ),
+      body: Stack(
+        children: [
+          MobileScanner(
+            controller: scannerController,
+            onDetect:(capture){
+              final barcode = capture.barcodes.first;
+              if(barcode.rawValue != null){
+                final String code = barcode.rawValue!;
+                _processScannedData(code);
+              }
+            },
+          ),
+            ],)
+
+    );   
+  }
   }
 }
 
