@@ -222,7 +222,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
               height: 350,
               child: Card(
                 elevation: 0,
-                color:Colors.white,
+                color: const Color(0xFF1C1C2B),
                 child:Padding(padding: EdgeInsets.all(30),
                 child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
