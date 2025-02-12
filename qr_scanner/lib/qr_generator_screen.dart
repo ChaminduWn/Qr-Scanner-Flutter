@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:path_provider/path_provider.dart';
@@ -119,9 +118,9 @@ Widget _buildTextField(TextEditingController controller, String label){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: const Color.fromARGB(255, 114, 7, 43),
       appBar: AppBar(
-        backgroundColor: Colors.indigo,
+        backgroundColor: const Color.fromARGB(255, 114, 7, 43),
         foregroundColor: Colors.white,
         elevation: 0,
         title: Text('Generate QR Code',style: GoogleFonts.poppins()), 

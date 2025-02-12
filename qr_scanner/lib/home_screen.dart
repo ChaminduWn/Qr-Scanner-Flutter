@@ -9,14 +9,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: const Color.fromARGB(255, 114, 7, 43),
       body: SafeArea(
         child: Column(
           children: [
             SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.all(24),
-              child: Text("QR CODE Max",
+              child: Text("WN QR CODE",
               style:GoogleFonts.poppins(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
         height: 200,
         width:250,
         decoration :BoxDecoration(
-          color: Colors.indigo,
+          color: const Color.fromARGB(255, 114, 7, 43),
           borderRadius: BorderRadius.circular(15),
 
         ),

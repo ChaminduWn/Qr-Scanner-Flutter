@@ -206,10 +206,10 @@ class _ScannerScreenState extends State<ScannerScreen> {
   Widget build(BuildContext context) {
     if(!hasPermission){      
     return  Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: const Color.fromARGB(255, 114, 7, 43),
       appBar:AppBar(
         title: Text("QR Scanner"),
-        backgroundColor: Colors.indigo,
+        backgroundColor: const Color.fromARGB(255, 114, 7, 43),
         foregroundColor: Colors.white,
       ),
       body:Column(
@@ -234,7 +234,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
                   SizedBox(height:16),
                   ElevatedButton(onPressed:  _checkPermission,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor :Colors.indigo,
+                    backgroundColor : const Color.fromARGB(255, 114, 7, 43),
                     foregroundColor :Colors.white
                   ), 
                   child: Text('Grant Permisson'),
@@ -249,10 +249,10 @@ class _ScannerScreenState extends State<ScannerScreen> {
   }  else {
 
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: const Color.fromARGB(255, 114, 7, 43),
       appBar:AppBar(
         title: Text("QR Scanner"),
-        backgroundColor: Colors.indigo,
+        backgroundColor: const Color.fromARGB(255, 114, 7, 43),
         foregroundColor: Colors.white,
         actions: [
           IconButton(
