@@ -253,7 +253,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
       backgroundColor: const Color(0xFF1C1C2B),
       appBar:AppBar(
          title: Text(
-          'Generate QR Code',
+          'Scan QR Code',
           style: GoogleFonts.poppins(
             color: Colors.cyanAccent,
             fontWeight: FontWeight.bold,
