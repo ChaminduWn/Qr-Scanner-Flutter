@@ -1,5 +1,11 @@
 # WN QR Scanner & Generator
 
+<center>
+
+  ![Colorful Planner Mobile App Promotion Instagram Post (1)](https://github.com/user-attachments/assets/73270513-5d6c-4969-afed-dc3b8ebfffea)
+
+</center>
+
 WN QR Scanner & Generator is a Flutter-based mobile application that allows users to scan and generate QR codes with ease. The app supports various types of QR codes, including text, URLs, and contact information. It also provides features like sharing QR codes, saving scanned contact information, and opening URLs directly from the app.
 
 ## Features
@@ -13,9 +19,16 @@ WN QR Scanner & Generator is a Flutter-based mobile application that allows user
 
 ## Screenshots
 
-![Home Screen](screenshots/home_screen.png)  
-![Generate QR Code](screenshots/generate_screen.png)  
-![Scan QR Code](screenshots/scan_screen.png)  
+![Home Screen](![Screenshot_20250212_171332 (1)](https://github.com/user-attachments/assets/213c5f1c-8e78-42c3-8cff-94a3be7a0c15))  
+![Generate QR Code](
+![Screenshot_20250212_175550](https://github.com/user-attachments/assets/97893feb-b749-450e-8a6c-24fc89372eda)
+![Screenshot_20250212_173626](https://github.com/user-attachments/assets/1d17604d-2116-48d4-8363-3f4542c573a2)
+![Screenshot_20250212_173755](https://github.com/user-attachments/assets/af25c91c-c357-4755-89a9-b2f810fa625c)
+)  
+![Scan QR Code](
+ ![Screenshot_20250212_174312](https://github.com/user-attachments/assets/ef8a21f1-cfc1-45d3-a245-5ba918d063fd)
+) 
+
 
 ## Installation
 
