@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(    
       debugShowCheckedModeBanner: false,
-      title: 'QR Scanner',
+      title: 'WN QR Scanner',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.yellow,
         useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(),
         colorScheme: ColorScheme.fromSeed(brightness: Brightness.light, 
-            seedColor: Colors.blue
+            seedColor: Colors.yellow
              ),
        
       ),
