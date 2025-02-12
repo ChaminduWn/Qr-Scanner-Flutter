@@ -26,8 +26,8 @@ WN QR Scanner & Generator is a Flutter-based mobile application that allows user
 
 ## Dependencies
 
-**flutter: The core framework for building the app.**
-**google_fonts: For custom fonts.**
+**flutter: The core framework for building the app.**:
+**google_fonts: For custom fonts.**:
 **qr_flutter: For generating QR codes.**
 **mobile_scanner: For scanning QR codes.**
 **flutter_contacts: For handling contact information.**
